@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PracticeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,4 @@ Route::get('/', function () {
 });
 
 //一覧画面を表示
-Route::get('/practice', 'PracticeController@showList')->name('practice');
+Route::get('/practice', [PracticeController::class, 'showList'])->name('practice');
