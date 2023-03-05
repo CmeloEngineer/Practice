@@ -14,6 +14,9 @@ class PracticeController extends Controller
      * @return view
      */
     public function showList(){
+
+        dd('practice');
+
         //Eloquent(エロクアント)
         $values = Practice::all();
 
