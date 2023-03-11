@@ -4,7 +4,8 @@ use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PracticeController;
-use App\Http\Controllers\ContactFormsController;
+use App\Http\Controllers\ShopController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,11 @@ use App\Http\Controllers\ContactFormsController;
 
 Route::get('practice/list', [ PracticeController::class, 'showList']);
 
+Route::get('shops', [ ShopController::class, 'index']);
+
 // Route::resource('contacts', ContactFormController::class);
 
-Route::get('contacts', [ ContactFormController::class, 'index'])->name('contacts.index');
+Route::get('contacts', [ ShopController::class, 'index']);
 
 Route::prefix('contacts')
 ->middleware(['auth'])
